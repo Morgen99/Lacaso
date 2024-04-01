@@ -1,123 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <style>
-        body{
-            background-image: url(window.png);
-        }
-        .all{
-            box-sizing: border-box;
-        }
-        input{
-            width: 30vh;
-            height: 30px;
-            margin: 8px;
-        }
-        .butt{
-            width: 100px;
-            height: 30px;
-            background-color: rgb(54, 65, 54);
-            font-size: 18px;
-        }
-        .butt:hover{
-            background-color: rgb(167, 167, 95);
-        }
-        .left{
-            background-color: rgb(133, 187, 133);
-            text-align: center;
-            border: 2px solid rgb(224, 219, 219);
-            width: 50vh;
-            border-radius: 50px;
-            box-sizing: border-box;
-            margin: 15px;
-            padding-top: 50px;
-        }
-        .left:hover{
-            background-color: white;
-        }
-        ul{
-            padding-right: 50px;
-            font-size: x-large;
-        }
-        .buttdiv{
-            padding-bottom: 30px;
-        }
-        .putt{
-            display: flex;
-            justify-content: space-between;
-          
-        }
-        a{
-            font-size: x-large;
-            margin: 10px;
-            color:white;
-            
-        }
-        a:hover{
-            background-color: aqua;
-        }
-        .cashar{
-            background-color: rgb(141, 182, 30);
-            text-align: center;
-            border: 2px solid rgb(224, 219, 219);
-            width: 65vh;
-            border-radius: 50px;
-            box-sizing: border-box;
-            margin: 15px;
-        }
-        .cashar:hover{
-            background-color:yellow;
-        }
-        header{
-            display: flex;
-            margin-left: 20%;
-            margin-top: 50px;
-        }
-        h1, h2{
-            font-size: xx-large;
-        }
-        .all2{
-            grid-template-columns: repeat(auto-fill, minmax(150px));
-        }
-    </style>
-</head>
-<body>
-    <div class="all2">
-    <div class=putt>
-    <img style="width: 50px;" src="minu.png.png" alt="">
-    <div>
-    <a href="">Home</a>
-    <a href="">Account</a>
-    <a href="">Team</a>
-    </div>
-    </div>
-    <header>
-        <nav class="left">
-    <div class="all">
-        <ul>login</ul>
-        <div class="email"><input type="Email" placeholder="Enter your Email"></div>
-        <div class="passworddiv"><input type="password" placeholder="Enter your password"></div>
-        <div class="buttdiv"><a href=""><button class="butt" onclick="itus()">login</button></a></div>
-    </div>
-    </nav>
-    <nav class="cashar">
-        <h1>hallo</h1>
-        <h2>waxaan rabaa inaan isku dayo sida loo sameeyo</h2>
-        <h2>isku daygu waa shay lama huraan ah</h2>
-        <h2>xataa hadaad kufto waa caadi</h2>
-    </nav>
-    </header>
-    </div>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url(inqra.JPG);
+    }
+    .all{
+        background-image: url(window.png);
+    }
+    .all{
+        display: flex;
+        justify-content: space-between;
+        grid-template-columns: (auto-fill minmax(100px));
+        background-color: gray;
+    }
+    
+    .minu{
+        width: 30px;
+    }
+    h1:hover{
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        
+    }
+    .link{
+        color: black;
+        margin: 2rem;
+        font-size: x-large;
+    }
+    .link:hover{
+        background-color: rgb(136, 177, 177);
+        color: rgb(231, 220, 220);
+    }
+    .all1{
+        border: 7px solid white;
+        display: flex;
+        
+        width: 20rem;
+        float: right;
+        grid-template-columns: (auto-fill minmax(100px));
+    }
+    .butt:hover{
+        color: white;
+        background-color: black;
 
-    <script>
-        function itus(){
-        alert("Waa Tijaabo kaliya")
-        }
-    </script>
+    }
+    .raadi{
+        height: 30px;
+        padding-right: 4rem;
+    }
+    .butt{
+        width: 5rem;
+        height: 2rem;
+    }
+    .butt{
+        
+
+    }
+    .raadidiv, .buttdiv{
+        margin: 5px;
+    }
+    .king{
+        width: 15rem;
+    }
+    .kingdiv{
+        margin-top: 5rem;
+        background-color: yellow;
+        width: 10rem;
+    }
+    .all1{
+        background-color: rgb(151, 151, 111);
+    }
+    .buttodiv{
+        background-image: url(window.png);
+        text-align: center;
+        height: 3rem;
+    }
+    .butto{
+        font-size: xx-large;
+        width: 8rem;
+        height: 2rem;
+        background-color: rgb(43, 156, 15);
+    }
+    .butto:hover{
+        background-color: black;
+        color: white;
+    }
+    
+</style>
+<body>
+    <div class="all">
+        <div class="minudiv"><img class="minu" src="minu.png.png" alt=""></div>
+        <div class="Ascdiv"><h1>ASC</h1></div>
+        <div class="alidiv"><a class="link" href="https://sureeye7.blogspot.com/?m=1">Sureeye</a> <a class="link" href="index.html">Account</a></div>
+    </div>
+    <div  class="all1">
+    <div class="raadidiv"><input class="raadi" type="text" placeholder="Raadi"></div>
+    <div class="buttdiv"><button class="butt">Raadi</button></div>
+    </div>
+    <div class="kingdiv"><img class="king" src="lacaso.png.JPG" alt=""></div>
+    <div class="buttodiv"><a href=""><button class="butto">Sii Wad</button></a></div>
 
 </body>
-</html>
-<script>
