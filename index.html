@@ -3,111 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boga hore</title>
+    <title>Document</title>
+    <style>
+         *{
+            font-family: Arial, sans-serif;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .all{
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-image: url(Feuer.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .minu{
+            height: 50px;
+            border-radius: 10px;
+            position: relative;
+            left: 15%;
+        }
+        .minudiv{
+            position: relative;
+            left: 2%;
+        }
+        .strongdiv{
+            margin: 20px;
+            color: blue;
+        }
+        .raadidiv{
+            position: relative;
+            left: 5%;
+    }
+        .strongdiv{
+            position: relative;
+            left: 20%;
+            justify-content: space-between;
+        }
+        .raadidiv{
+            margin: 20px;
+        }
+        .box{
+            display: flex;
+            margin: 5px;
+            position: relative;
+            justify-content: center;
+        }
+        .lesen1div, .lesen2div{
+            margin: 5px;
+            height: 50vh;
+            overflow: auto;
+            color: white;
+        }
+        .lesen1div{
+            width: 50vh;
+            font-size: 17px;
+        }
+        .lesen2div{
+            width: 50vh;
+        }
+        .buttdiv{
+            display: flex;
+            justify-content: center;
+            margin: 35px;
+        }
+        .butt{
+            background-color: blue;
+            color: white;
+            padding: 9px;
+        }
+        .butt:hover{
+            background-color: green;
+        }
+
+#splashScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    font-size: 24px;
+    animation: fadeOut 3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+.hidden {
+    display: none;
+}
+
+    </style>
+        <script>
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById('splashScreen').style.display = 'none';
+        document.getElementById('mainContent').classList.remove('hidden');
+    }, 5000); // Die Zeit sollte die Gesamtdauer der CSS-Animation widerspiegeln
+});
+</script>
 </head>
-<style>
-    body{
-        margin: 0;
-        padding: 0;
-        background-image: url(inqra.JPG);
-        padding-bottom: 1000px;
-    }
-    .all{
-        background-image: url(window.png);
-    }
-    .all{
-        display: flex;
-        justify-content: space-between;
-        grid-template-columns: (auto-fill minmax(100px));
-        background-color: gray;
-    }
-    
-    .minu{
-        width: 30px;
-    }
-    h1:hover{
-        background-color: green;
-        color: white;
-        cursor: pointer;
-        
-    }
-    .link{
-        color: black;
-        margin: 2rem;
-        font-size: x-large;
-    }
-    .link:hover{
-        background-color: rgb(136, 177, 177);
-        color: rgb(231, 220, 220);
-    }
-    .all1{
-        border: 7px solid white;
-        display: flex;
-        
-        width: 20rem;
-        float: right;
-        grid-template-columns: (auto-fill minmax(100px));
-    }
-    .butt:hover{
-        color: white;
-        background-color: black;
-
-    }
-    .raadi{
-        height: 30px;
-        padding-right: 4rem;
-    }
-    .butt{
-        width: 5rem;
-        height: 2rem;
-    }
-    .butt{
-        
-
-    }
-    .raadidiv, .buttdiv{
-        margin: 5px;
-    }
-    .king{
-        width: 15rem;
-    }
-    .kingdiv{
-        margin-top: 5rem;
-        background-color: yellow;
-        width: 10rem;
-    }
-    .all1{
-        background-color: rgb(151, 151, 111);
-    }
-    .buttodiv{
-        background-image: url(window.png);
-        text-align: center;
-        height: 3rem;
-    }
-    .butto{
-        font-size: xx-large;
-        width: 8rem;
-        height: 2rem;
-        background-color: rgb(43, 156, 15);
-    }
-    .butto:hover{
-        background-color: black;
-        color: white;
-    }
-    
-</style>
 <body>
+    <div id="splashScreen">
+        Fadlan inyar Sug...
+    </div>
+    <div id="mainContent" class="hidden">
     <div class="all">
-        <div class="minudiv"><img class="minu" src="minu.png.png" alt=""></div>
-        <div class="Ascdiv"><h1>ASC</h1></div>
-        <div class="alidiv"><a class="link" href="https://sureeye7.blogspot.com/?m=1">Sureeye</a> <a class="link" href="index2.html">Account</a></div>
+        <div class="minudiv">
+            <img class="minu" src="minu.png.png" alt="">
+        </div>
+        <div class="strongdiv">
+            <strong>ku soo dhowoow bogeeena</strong>
+        </div>
     </div>
-    <div  class="all1">
-    <div class="raadidiv"><input class="raadi" type="text" placeholder="Raadi"></div>
-    <div class="buttdiv"><button class="butt">Raadi</button></div>
+    <span style="display: flex; justify-content: center; ">
+    <strong>Tag sureeye7, si aad u akhristato qoraaladan iyagoo dhamaystiran
+</span>
+    </strong>
+    <nav style="background-image: url(Feuer1.jpg);">
+    <div class="box">
+    <div class="lesen1div">
+        <h6 class="lesen1"> Daar quful shaashadda, sida B. PIN, qaab, sawir-gacmeedka faraha ama aqoonsiga wejiga si loo hubiyo in adiga oo keliya ay geli karto taleefankaaga.
+            • Isticmaal furaha sirta ah ee adag akoonnada iyo abka ay ku jiraan macluumaadka xasaasiga ah.
+        
+        2. Cusbooneysii nidaamkaaga hawlgalka:
+        
+            • Hayso nidaamkaaga qalliinka (tusaale Android, iOS) iyo abka si aad u hesho cusboonaysiinta amniga iyo balastarrada.
+        
+        3. Oggolaanshaha App:
+        
+            • Dib u eeg oggolaanshaha ay abka taleefankaaga codsadeen oo kaliya bixi ogolaanshaha lagama maarmaanka ah. Barnaamijyada qaarkood waxay geli karaan xogta aysan u baahnayn.
+        
+        4. Ilaha App:
+        
+            • Kaliya ku rakib abka ilaha la aamini karo sida Google Play (Android) ama App Store (iOS). Ka fogow soo dejinta abka ilo aan la garanayn
+        
+        5. Software ka-hortagga fayraska:
+        
+            • Ku rakib abka ka hortagga fayraska ee la aamini karo si aad isaga ilaaliso malware-ka iyo fayrasyada.
+        
+        6. Ilaalinta xogta iyo sirta:
+        
+            • Siri xogtaada haddii taleefankaagu bixiyo ikhtiyaarkan si loo hubiyo in macluumaadkaaga shakhsiyeed la ilaaliyo.
+            • Isticmaal xidhiidho sugan marka aad dhex wareegayso intarneedka oo aad isticmaasho apps fariimaha sirta ah ee wada xidhiidhka sirta ah.
+        
+        7. Xiriir sugan
+        
+            • Ka fogow shabakadaha Wi-Fi-ga ee dadweynaha maadaama ay u nugul yihiin in la jabsado. Haddii aad isticmaasho shabakadaha Wi-Fi ee dadweynaha, isticmaal Shabakadda Gaarka ah ee Virtual (VPN) si aad u hesho xiriir sugan.
+        
+        8. Tirtir fog iyo goobta:
+        
+            • Daar masar fogaanta iyo astaamaha goobta taleefankaaga si aad u hesho oo aad u tirtirto xogtaada haddii uu lumo ama la xado.
+        
+        9. Badbaadinta sugan:
+        
+            • Si joogto ah u kaydi xogtaada iyo sawiradaada hab sugan si aad uga hortagto luminta xogta.
+        
+        10. Khiyaaliga iyo spamka:
+        
+            • Ka digtoonow iimaylada, fariimaha qoraalka ah iyo wicitaanada ka imanaya ilo aan la garanayn hana gujin xiriirinta shakiga leh.
+        Tallaabooyinkan ayaa kaa caawin kara xaqiijinta amniga taleefankaaga gacanta. Xusuusnow in dayactirka joogtada ah iyo u fiirsashada wararka iyo digniinaha ammaanku ay muhiim u yihiin ilaalinta taleefankaaga. 
+        </h6>
     </div>
-    <div class="kingdiv"><img class="king" src="lacaso.png.JPG" alt=""></div>
-    <div class="buttodiv"><a href="https://sureeye7.blogspot.com/?m=1"><button class="butto">Sii Wad</button></a></div>
+    <div class="lesen2div">
+        <h6 class="lesen2">
+            Soo dir oo hel lacag-bixinaha: PayPal waxay kuu oggolaanaysaa inaad lacag u dirto ama aad ka hesho dadka kale, hadday tahay wax iibsiga onlaynka ah, asxaabta iyo qoyska, ama wax kala iibsiga ganacsiga.
 
+Wax iibsiga onlaynka ah:
+
+ Qaar badan oo tafaariiqle online ah ayaa u aqbala PayPal qaab lacag bixin ahaan. Markaad isticmaasho PayPal si aad wax u iibsato, uma baahnid inaad bangigaaga ama macluumaadka kaadhka deynta si toos ah ula wadaagto ganacsadaha taas oo khalkhal ku keeni karta amaanka kaarkaaga bangiga
+
+Koontada PayPal:
+
+ Si aad u isticmaasho PayPal, waa inaad samaysaa akoon PayPal ah oo ku xidhan akoonkaaga bangiga ama kaarka deynta. Waxaad maalgelin kartaa koontadaada PayPal oo aad u isticmaali kartaa inaad lacag ku bixiso.
+
+Paypal App-ka:
+
+ PayPal waxa kale oo ay bixisaa apps moobaylka casriga ah iyo tablets-ka kuwaas oo kuu ogolaanaya in aad dirto oo aad hesho lacag bixinta marka aad socoto.
+
+Ilaalinta Iibsadaha:
+
+PayPal waxay bixisaa ilaalin iibsadaha oo ka ilaalin karta iibsadaha wax kala iibsiga been abuurka ah haddii alaabta la iibsaday aan ahayn sida lagu sharraxay ama aan la keenin.
+
+PayPal 
+
+Paypal waxay isku dhejisay adeeg lacag bixineed oo caan ah oo wax kala beddelashada khadka ah waxaana laga isticmaalaa waddamo badan oo adduunka ah. Waxay bixisaa ku habboonaansho iyo ammaan marka la samaynayo macaamil lacageed oo internetka ah. Si kastaba ha ahaatee, fadlan ogow in helitaanka PayPal iyo adeegyada ay bixiso ay ku kala duwanaan karaan waddan ahaan.
+
+        </h6>
+    </div>
+    </div>
+    <div class="buttdiv">
+        <a href="chrom.html">
+        <button class="butt">Hore u Soco</button>
+        </a>
+    </div>
+    </nav>
+    <br>
+    <div class="down">
+        <div class="linkdiv">
+            <a href="">Nagu soo biir</a>
+            <br>
+            <a href="">guriga</a>
+            <br>
+            <a href="">sida loo bixiyo</a>
+        </div>
+        <div class="linkdiv2">
+            <a href="">wararka</a>
+
+            <a href="">xayaysiisyada</a>
+
+            <a href="">iibso</a>
+        </div>
+        <div class="linkdiv3">
+            <button class="caawi">Caawi</button>
+        </div>
+        <div class="coockiediv" id="cookieConsentBanner"
+         style="display: non; position: fixed; bottom: 0; width: 100%; background:
+          rgb(174, 99, 99); color: black; padding: 10px; text-align: center;">
+          bogaan ma isticmaalo coockie Fadlan macluumaadkaaga waxaan ka arki doonaa
+          oo kaliya isku wax yaabaha aad ka badasho boga
+            <button class="onclick" onclick="acceptCookies()">Waan aqbalay</button>
+            <button class="onclick" onclick="rejectCookies()">waan diiday</button>
+        </div>
+
+    </a>
 </body>
-</html>
+</html> 
+<script>
+    window.onload = function() {
+    if (!getCookie("cookieConsent")) {
+        document.getElementById("cookieConsentBanner").style.display = "block";
+    }
+};
+
+function acceptCookies() {
+    setCookie("cookieConsent", "accepted", 365);
+    document.getElementById("cookieConsentBanner").style.display = "none";
+}
+
+function rejectCookies() {
+    setCookie("cookieConsent", "rejected", 365);
+    document.getElementById("cookieConsentBanner").style.display = "none";
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+</script>
+<style>
+    .down{
+        display: flex;
+        justify-content: center;
+        background-color: rgb(48, 43, 43);
+        background-position: center;
+        background-size: cover;
+        color: black;
+    }
+    #cookieConsentBanner {
+    font-family: Arial, sans-serif;
+}
+.onclick{
+    background-color: blue;
+    color: white;
+}
+
+    .linkdiv, .linkdiv2, .linkdiv3{
+        width: 100px;
+        margin: 15px;
+    }
+    a{
+        margin: 2px;
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        color: blue;
+    }
+    .caawi{
+        background-color: blue;
+        color: white;
+        padding: 9px;
+    }
+    .coockiediv{
+        position: fixed;
+        position: absolute;
+        height: 10vh;
+    }
+    .coockiediv:hover{
+        background-color: red;
+    }
+</style>
