@@ -3,118 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <style>
-        body{
-            background-image: url(window.png);
-        }
-        .all{
-            box-sizing: border-box;
-        }
-        input{
-            width: 30vh;
-            height: 30px;
-            margin: 8px;
-        }
-        .butt{
-            width: 100px;
-            height: 30px;
-            background-color: rgb(54, 65, 54);
-            font-size: 18px;
-        }
-        .butt:hover{
-            background-color: rgb(167, 167, 95);
-        }
-        .left{
-            background-color: rgb(133, 187, 133);
-            text-align: center;
-            border: 2px solid rgb(224, 219, 219);
-            width: 50vh;
-            border-radius: 50px;
-            box-sizing: border-box;
-            margin: 15px;
-            padding-top: 50px;
-        }
-        .left:hover{
-            background-color: white;
-        }
-        ul{
-            padding-right: 50px;
-            font-size: x-large;
-        }
-        .buttdiv{
-            padding-bottom: 30px;
-        }
-        .putt{
-            display: flex;
-            justify-content: space-between;
-          
-        }
-        a{
-            font-size: x-large;
-            margin: 10px;
-            color:white;
-            
-        }
-        a:hover{
-            background-color: aqua;
-        }
-        .cashar{
-            background-color: rgb(141, 182, 30);
-            text-align: center;
-            border: 2px solid rgb(224, 219, 219);
-            width: 65vh;
-            border-radius: 50px;
-            box-sizing: border-box;
-            margin: 15px;
-        }
-        .cashar:hover{
-            background-color:yellow;
-        }
-        header{
-            display: flex;
-            margin-left: 20%;
-            margin-top: 50px;
-        }
-        h1, h2{
-            font-size: xx-large;
-        }
-        .all2{
-            grid-template-columns: repeat(auto-fill, minmax(150px));
-        }
-    </style>
+    <title>Document</title>
 </head>
-<body>
-    <div class="all2">
-    <div class=putt>
-    <img style="width: 50px;" src="minu.png.png" alt="">
-    <div>
-    <a href="">Home</a>
-    <a href="">Account</a>
-    <a href="">Team</a>
+<body style="margin: 0;font-family: Arial, sans-serif;">
+    <div class="box">
+        <div class="minudiv" 
+        style="display: flex;justify-content: space-between;
+        background-image: url(Feuer.jpg);
+        background-position: center;
+        height: 10vh; position: fixed; width: 100%;">
+            <img style="height: 50px;border-radius: 50px;
+            " src="minu.png.png" alt="">
+            <h6 style="color: black;font-size: 16px;">Sureeye</h6>
+            <a href="">
+                <button style="margin: 15px; color: white;
+                background-color: blue;">Acount</button>
+            </a>
+        </div>
+    </div>
+    <br>
+    <div style=" display: flex; margin: 5px;">
+        <div style="margin-top: 15%; display: block;  border: 1px solid black">
+            <input type="text" placeholder="magaca">
+            <input type="text" placeholder="emailka" >
+            <textarea name="" onclick="hallo()" placeholder="qoraalka"></textarea>
+            <button style="position: relative; left: 35%;
+            " class="butt">Dir</button>
+        </div>
+        <div style="margin: 25px;height: 55vh;">
+            <h5 style="overflow: auto; border: 1px solid red;height: 50vh;">Send and receive payments: PayPal allows you to send
+</h5>
     </div>
     </div>
-    <header>
-        <nav class="left">
-    <div class="all">
-        <ul>login</ul>
-        <div class="email"><input type="Email" placeholder="Enter your Email"></div>
-        <div class="passworddiv"><input type="password" placeholder="Enter your password"></div>
-        <div class="buttdiv"><a href=""><button class="butt" onclick="itus()">login</button></a></div>
-    </div>
-    </nav>
-    <nav class="cashar">
-        <h1>hallo</h1>
-    </nav>
-    </header>
-    </div>
-
-    <script>
-        function itus(){
-        alert("Waa Tijaabo kaliya")
-        }
-    </script>
-
 </body>
 </html>
+<style>
+    input, button{
+        display: block;
+    }
+    input{
+        height: 5vh;
+        width: 45vh;
+    }
+    textarea{
+        height: 15vh;
+        position: relative;
+        left: 15%;
+    }
+    input, textarea, .butt{
+        margin: 15px;
+    }
+</style>
 <script>
+    function hallo(){
+        alert("fadlan aflagaado maya")
+    }
+</script>
