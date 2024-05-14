@@ -1,61 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body style="margin: 0;font-family: Arial, sans-serif;">
-    <div class="box">
-        <div class="minudiv" 
-        style="display: flex;justify-content: space-between;
-        background-image: url(Feuer.jpg);
-        background-position: center;
-        height: 10vh; position: fixed; width: 100%;">
-            <img style="height: 50px;border-radius: 50px;
-            " src="minu.png.png" alt="">
-            <h6 style="color: black;font-size: 16px;">Sureeye</h6>
-            <a href="">
-                <button style="margin: 15px; color: white;
-                background-color: blue;">Acount</button>
-            </a>
-        </div>
-    </div>
-    <br>
-    <div style=" display: flex; margin: 5px;">
-        <div style="margin-top: 15%; display: block;  border: 1px solid black width: 25vh;">
-            <input type="text" placeholder="magaca">
-            <input type="text" placeholder="emailka" >
-            <textarea name="" onclick="hallo()" placeholder="qoraalka"></textarea>
-            <button style="position: relative; left: 35%;
-            " class="butt">Dir</button>
-        </div>
-        <div style="margin: 25px;height: 55vh;">
-            <h5 style="overflow: auto; border: 1px solid red;height: 50vh;">Send and receive payments: PayPal allows you to send
-</h5>
-    </div>
-    </div>
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML-Speichern</title>
 <style>
-    input, button{
-        display: block;
+    body{
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-image: url(window.png);
+
     }
-    input{
-        height: 5vh;
-        width: 25vh;
-    }
-    textarea{
-        height: 15vh;
-        position: relative;
-        left: 15%;
-    }
-    input, textarea, .butt{
+    label, textarea, button{
         margin: 15px;
     }
-</style>
-<script>
-    function hallo(){
-        alert("fadlan aflagaado maya")
+    textarea{
+        height: 25vh;
+        width: 45vh;
+        background-color: black;
+        color: white;
     }
-</script>
+</style>
+</head>
+<body>
+    <label for="htmlInput">HTML-Text eingeben:</label><br>
+    <textarea id="htmlInput" rows="4" cols="50"></textarea><br>
+    <button onclick="speichernHTML()">Speichern</button>
+    
+    <script>
+        // Beim Laden der Seite überprüfen, ob gespeicherter HTML-Text vorhanden ist
+        window.onload = function() {
+            var gespeicherterHTMLText = localStorage.getItem('gespeicherterHTMLText');
+            if (gespeicherterHTMLText) {
+                // Wenn gespeicherter HTML-Text vorhanden ist, füllen Sie das Textfeld damit
+                document.getElementById('htmlInput').value = gespeicherterHTMLText;
+            }
+        };
+
+        function speichernHTML() {
+            // HTML-Text aus dem Textfeld mit der ID "htmlInput" lesen
+            var htmlText = document.getElementById('htmlInput').value;
+            
+            // HTML-Text im Local Storage speichern
+            localStorage.setItem('gespeicherterHTMLText', htmlText);
+            
+            alert('HTML-Text erfolgreich gespeichert!');
+        }
+    </script>
+</body>
+</html>
