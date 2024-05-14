@@ -78,7 +78,7 @@ function getCookie(name) {
        </div>
        <br>
         <div style=" display: flex; margin-top: 11%; 
-        background-position: center; background-image: url(Feuer1.jpg);
+        background-position: center; background-image: url(window.png);
         height: 80vh;color: white;">
             <div style="">
                 <h6 style="border: 1px solid black; box-shadow: 5px 5px 5px;
@@ -120,9 +120,13 @@ Und so wurde Finn nicht nur zum Helden von Elveria, sondern auch zu einem Symbol
             </button>
         </div>
         <br>
+        <div class="arrow-container">
+            <div class="arrow"></div>
+          </div>
+          <br>
         <div style="background-color: rgb(51, 48, 48);
          display: flex; justify-content: space-between;">
-            <div>
+            <div onclick="amaan()">
             <a href="">
                 <img style="height: 20px;" src="paypal.webp" alt="">
             </a>
@@ -137,7 +141,16 @@ Und so wurde Finn nicht nur zum Helden von Elveria, sondern auch zu einem Symbol
     </heider>
 </body>
 </html>
+<script>
+    function amaan() {
+        alert('jetzt ist nicht möglich')
+    }
+</script>
 <style>
+    .coockiesdiv{
+        position: fixed;
+        bottom: 25%;
+    }
 
 #splashScreen {
     display: flex;
@@ -159,6 +172,32 @@ Und so wurde Finn nicht nur zum Helden von Elveria, sondern auch zu einem Symbol
 
 .hidden {
     display: none;
+}
+.arrow-container {
+  position: absolute;
+  width: 200px; /* Breite des Containers */
+  height: 200px; /* Höhe des Containers */
+  left: 15%;
+}
+
+.arrow {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50vh;
+  background-image: url(animtion.jpg);
+  animation: arrowBounce 2s infinite; /* Verwende die CSS-Animation 'arrowBounce' */
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    bottom: 0; /* Start- und Endposition des Pfeils */
+  }
+  50% {
+    bottom: 20px; /* Maximaler Abstand, den der Pfeil nach oben bewegt wird */
+  }
 }
 </style>
 <script>
