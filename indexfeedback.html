@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="all">
+    <form action="https://api.web3forms.com/submit" method="POST" class="formdiv">
+      <div class="alll">
+        <div style="display: flex; justify-content: center;">
+            <h4 style="color: red;">Su aasha</h4>
+        </div>
+        <input type="hidden" name="access_key" value="d63f6ca0-5303-4da8-ab05-6a5c88b7b224">
+    <input class="name" type="name" placeholder="Magacaaga">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<label for="email"></label>
+<input class="name" id="email" type="email" placeholder="Gali Emailka">
+
+<p id="result"></p>
+    <textarea class="masseg" name="Masseg" placeholder="su aasha">
+</textarea>
+<div class="buttdiv">
+<button class="butt" type="submit">Dir</button>
+</div>
+    </div>
+    </form>
+  </div>
+</body>
+</html>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 25px;
+        background-image: img;
+    }
+    i{
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+    .all{
+      font-family: Arial, sans-serif;
+        border: 1px solid black;
+        width: 50%;
+        font-family: Arial, sans-serif;
+        width: 80%;
+        background-color: white;
+        text-align: center;
+        overflow: hidden;
+    }
+    textarea::placeholder{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        color: black;
+    }
+    ::placeholder{
+        text-align: center;
+        align-items: center;
+        color: black;
+    }
+    .name, textarea{
+        display: block;
+        margin: 15px;
+        overflow: hidden;
+        text-align: center;
+        background-color: rgb(160, 154, 154);
+        color: white;
+        left: 15%;
+    }
+    .name{
+        height: 50px;
+        width: 85%;
+        overflow: hidden;
+        border: 1px solid black;
+    }
+    textarea{
+        height: 30vh;
+        width: 35vh;
+        text-align: center;
+        margin-left: 15%;
+    }
+    .butt{
+        width: 25%;
+        padding: 5px;
+        background-color: blue;
+        color: white;
+    }
+    .butt:hover{
+        background-color: green;
+    }
+    .buttdiv{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+</style>
+
+<script>
+  const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+
+const validate = () => {
+  const $result = $('#result');
+  const email = $('#email').val();
+  $result.text('');
+
+  if(validateEmail(email)){
+    $result.text(email + ' erfolgreich.');
+    $result.css('color', 'green');
+  } else{
+    $result.text(email + ' eingeben.');
+    $result.css('color', 'red');
+  }
+  return false;
+}
+
+$('#email').on('input', validate);
+
+</script>
