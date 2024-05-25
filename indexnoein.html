@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Notizbuch</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e3e3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #d5d5d5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#noteInput {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.note {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notizbuch</h1>
+        <form id="noteForm">
+            <textarea id="noteInput" placeholder="Schreibe deine Notiz hier..." rows="5"></textarea><br>
+            <button type="submit">Notiz hinzufügen</button>
+        </form>
+        <div style=";" id="notesContainer"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+<script>
+  document.getElementById('noteForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Verhindert das automatische Neuladen der Seite
+
+    const noteInput = document.getElementById('noteInput');
+    const noteText = noteInput.value.trim();
+
+    if (noteText !== '') {
+        addNoteToContainer(noteText);
+        saveNoteToLocalStorage(noteText);
+        noteInput.value = ''; // Leert das Textfeld
+    }
+});
+
+function addNoteToContainer(noteText) {
+    const notesContainer = document.getElementById('notesContainer');
+
+    const noteElement = document.createElement('div');
+    noteElement.classList.add('note');
+    noteElement.textContent = noteText;
+
+    notesContainer.appendChild(noteElement);
+}
+
+function saveNoteToLocalStorage(noteText) {
+    let notes = JSON.parse(localStorage.getItem('notes')) || [];
+    notes.push(noteText);
+    localStorage.setItem('notes', JSON.stringify(notes));
+}
+
+function loadNotesFromLocalStorage() {
+    const notes = JSON.parse(localStorage.getItem('notes')) || [];
+    notes.forEach(noteText => addNoteToContainer(noteText));
+}
+
+// Lädt die Notizen aus dem localStorage, wenn die Seite geladen wird
+document.addEventListener('DOMContentLoaded', loadNotesFromLocalStorage);
+
+</script>
