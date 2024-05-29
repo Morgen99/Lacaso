@@ -3,294 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.php">
-    <title>Document</title>
+    <title>webste</title>
     <style>
-         *{
+        *{
             font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
         body{
             margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            height: 100%;
         }
-        .all{
+        .header{
+            position: fixed;
+            margin: 0;
             display: flex;
-            background-image: url('Feuer.jpg');
+            width: 100%;
+            height: 15vh;
+            background-image: url(Feuer.jpg);
+            color: white;
             background-position: center;
             background-size: cover;
         }
-        .minu{
-            height: 50px;
-            border-radius: 10px;
-            position: relative;
-            left: 15%;
+        .searchbutton{
+            display: flex;
+            justify-content: end;
+            width: 88%;
+            position: absolute;
+            top: 5%;
         }
         .minudiv{
-            position: relative;
-            left: 2%;
-        }
-        .strongdiv{
-            margin: 20px;
-            color: blue;
-            position: relative;
-            left: 20%;
-        }
-        .raadidiv{
-            position: relative;
+            width: 50%;
+            position: absolute;
+            top: 5%;
             left: 5%;
-            margin: 20px;
         }
         .box{
-            display: flex;
-            margin: 5px;
-            justify-content: center;
-        }
-        .lesen1div, .lesen2div{
-            margin: 5px;
-            height: 50vh;
-            overflow: auto;
-            color: white;
-        }
-        .lesen1div{
-            width: 50vh;
-            font-size: 17px;
-        }
-        .lesen2div{
-            width: 50vh;
-        }
-        .buttdiv{
-            display: flex;
-            justify-content: center;
-            margin: 35px;
-        }
-        .butt{
-            background-color: blue;
-            color: white;
-            padding: 9px;
-        }
-        .butt:hover{
-            background-color: green;
-        }
-
-        #splashScreen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: grid;
             width: 100%;
-            background-color: #3498db;
-            color: white;
-            font-size: 24px;
-            animation: fadeOut 3s forwards;
-            animation-delay: 2s;
-        }
-
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; visibility: hidden; }
-        }
-
-        .hidden {
-            display: none;
-        }
-        .down{
-            display: flex;
-            justify-content: center;
-            background-color: rgb(48, 43, 43);
+            background-image: url(Feuer1.jpg);
+            align-items: center;
             background-position: center;
             background-size: cover;
-            color: black;
-        }
-        #cookieConsentBanner {
-            font-family: Arial, sans-serif;
-        }
-        .onclick{
-            background-color: blue;
-            color: white;
-        }
-        .linkdiv, .linkdiv2, .linkdiv3{
-            width: 100px;
-            margin: 15px;
-        }
-        a{
-            margin: 2px;
-            text-decoration: none;
-            color: white;
-        }
-        a:hover{
-            color: blue;
-        }
-        .caawi{
-            background-color: blue;
-            color: white;
-            padding: 9px;
-        }
-        .coockiediv{
-            position: fixed;
-            position: absolute;
-            height: 10vh;
-        }
-        .coockiediv:hover{
-            background-color: red;
-        }
-        .settingsMenu {
-            display: flex;
+            grid-template-rows: repeat(2, .1fr);
+            grid-template-columns: repeat(2, .1fr);
             justify-content: center;
-            background-color: #f0f0f0;
-            padding: 10px;
-            margin: 20px 0;
+            overflow: hidden;
+            margin-top: 14vh;
         }
-        .settingsMenu a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: black;
+        .buttpost{
+            margin: 9px;
+            height: 100px;
         }
-        .settingsMenu a:hover {
-            color: blue;
+        .buttpost1{
+            height: 100px;
         }
-        .postCreator {
-            display: flex;
-            justify-content: center;
-            background-color: #f9f9f9;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .postCreator form {
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-        }
-        .postCreator input, .postCreator textarea {
-            margin: 10px 0;
-            padding: 10px;
-            font-size: 16px;
-        }
-        .postCreator button {
-            padding: 10px;
-            background-color: blue;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .postCreator button:hover {
-            background-color: green;
-        }
+        .downlink{
+        background-color: rgb(20, 20, 20);
+        color: white;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-size: 19px;
+        top: auto;
+    }
+    .linkdown{
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 19px;
+    }
+    .linkdown:hover{
+        background-color: yellow;
+        color: blue;
+    }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                document.getElementById('splashScreen').style.display = 'none';
-                document.getElementById('mainContent').classList.remove('hidden');
-            }, 5000); // Die Zeit sollte die Gesamtdauer der CSS-Animation widerspiegeln
-        });
-
-        window.onload = function() {
-            if (!getCookie("cookieConsent")) {
-                document.getElementById("cookieConsentBanner").style.display = "block";
-            }
-        };
-
-        function acceptCookies() {
-            setCookie("cookieConsent", "accepted", 365);
-            document.getElementById("cookieConsentBanner").style.display = "none";
-        }
-
-        function rejectCookies() {
-            setCookie("cookieConsent", "rejected", 365);
-            document.getElementById("cookieConsentBanner").style.display = "none";
-        }
-
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-        }
-
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for(var i=0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-            }
-            return null;
-        }
-    </script>
 </head>
 <body>
-    <div id="splashScreen">
-        Fadlan inyar Sug...
+    <div class="header">
+        <div class="minudiv">
+            <button>
+                <img style="height: 40px;" src="minuwhite.png" alt="">
+            </button>
+            <i>Sureeye</i>
+        </div>
+        <div class="searchbutton">
+            <button>
+            <img style="height: 30px;" src="search.jpg" alt="">
+            </button>
+        </div>
+        <div></div>
     </div>
-    <div id="mainContent" class="hidden">
-        <div class="all">
-            <div class="minudiv">
-                <a href="indexhtml2.html">
-                    <img class="minu" src="minu.png.png" alt="">
-                </a>
-            </div>
-            <div class="strongdiv">
-                <strong>ku soo dhowoow bogeeena</strong>
-            </div>
-        </div>
-        <span style="display: flex; justify-content: center;">
-            <strong>Tag sureeye7, si aad u akhristato qoraaladan iyagoo dhamaystiran</strong>
-        </span>
-        <nav style="background-image: url('Feuer1.jpg');">
-            <div class="box">
-                <div class="lesen1div">
-                    <h6 class="lesen1"> 
-                        <!-- Inhalt hier -->
-                    </h6>
-                </div>
-                <div class="lesen2div">
-                    <h6 class="lesen2">
-                        <!-- Inhalt hier -->
-                    </h6>
-                </div>
-            </div>
-            <div class="buttdiv">
-                <a href="indexhtml2.html">
-                    <button class="butt">Hore u Soco</button>
-                </a>
-            </div>
-        </nav>
-        <div class="settingsMenu">
-            <a href="#profileSettings">Profileinstellungen</a>
-            <a href="#privacySettings">Datenschutzeinstellungen</a>
-            <a href="#notificationSettings">Benachrichtigungseinstellungen</a>
-        </div>
-        <div class="postCreator">
-            <form action="save_post.php" method="post">
-                <input type="text" name="title" placeholder="Titel des Beitrags" required>
-                <textarea name="content" rows="10" placeholder="Inhalt des Beitrags" required></textarea>
-                <button type="submit">Beitrag erstellen</button>
-            </form>
-        </div>
-        <div class="down">
-            <div class="linkdiv">
-                <a href="">Nagu soo biir</a><br>
-                <a href="">guriga</a><br>
-                <a href="">sida loo bixiyo</a>
-            </div>
-            <div class="linkdiv2">
-                <a href="">wararka</a><br>
-                <a href="">xayaysiisyada</a><br>
-                <a href="">iibso</a>
-            </div>
-            <div class="linkdiv3">
-                <button class="caawi">Caawi</button>
-            </div>
-            <div class="coockiediv" id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; width: 100%; background: rgb(174, 99, 99); color: black; padding: 10px; text-align: center;">
-                Please accept our terms and conditions
-                This page is new but it is not using google search
-                <button class="onclick" onclick="acceptCookies()">Waan aqbalay</button>
-                <button class="onclick" onclick="rejectCookies()">waan diiday</button>
-            </div>
-        </div>
+    <br>
+    <div class="box">
+        <a class="buttlinkpost" href="banee.html">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="https://sureeye7.blogspot.com/2023/11/sida-hackerka-looga-badbaadiyo-mobilka.html">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+    </div>
+    <br>
+    <div class="downlink">
+        <ul class="linkdiv">
+            <a class="linkdown" href="">Nagu soo biir</a>
+
+            <a class="linkdown" href="">guriga</a>
+
+            <a class="linkdown" href="">sida loo bixiyo</a>
+        </ul>
+        <ul class="linkdiv2">
+            <a class="linkdown" href="">wararka</a>
+
+            <a class="linkdown" href="">xayaysiisyada</a>
+
+            <a class="linkdown" href="">iibso</a>
+        </ul>
     </div>
 </body>
 </html>
+<style>
+
+</style>
