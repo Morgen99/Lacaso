@@ -3,208 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>webste</title>
     <style>
-        h6, h5{
-            box-shadow: 5px 5px 5px;
-            margin: 5px;
-            height: 50vh;
+        *{
+            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
-        img{
-            margin: 5px;
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            height: 100%;
         }
+        .header{
+            position: fixed;
+            margin: 0;
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            background-image: url(Feuer.jpg);
+            color: white;
+            background-position: center;
+            background-size: cover;
+        }
+        .searchbutton{
+            display: flex;
+            justify-content: end;
+            width: 88%;
+            position: absolute;
+            top: 5%;
+        }
+        .minudiv{
+            width: 50%;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+        }
+        .box{
+            font-family: Arial, sans-serif;
+            display: grid;
+            width: 100%;
+            background-image: url(Feuer1.jpg);
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+            grid-template-rows: repeat(2, .1fr);
+            grid-template-columns: repeat(2, .1fr);
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 14vh;
+        }
+        .buttpost{
+            margin: 9px;
+            height: 100px;
+        }
+        .buttpost1{
+            height: 100px;
+        }
+        .downlink{
+        background-color: rgb(20, 20, 20);
+        color: white;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-size: 19px;
+        top: auto;
+    }
+    .linkdown{
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 19px;
+    }
+    .linkdown:hover{
+        background-color: yellow;
+        color: blue;
+    }
     </style>
-        <script>
-    window.onload = function() {
-    if (!getCookie("cookieConsent")) {
-        document.getElementById("cookieConsentBanner").style.display = "block";
-    }
-};
-
-function acceptCookies() {
-    setCookie("cookieConsent", "accepted", 365);
-    document.getElementById("cookieConsentBanner").style.display = "none";
-}
-
-function rejectCookies() {
-    setCookie("cookieConsent", "rejected", 365);
-    document.getElementById("cookieConsentBanner").style.display = "none";
-}
-
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
-
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-
-</script>
 </head>
-<body style="margin: 0;font-family: Arial,  sans-serif;">
-    <div id="splashScreen">
-        Ein Moment bitte...
+<body>
+    <div class="header">
+        <div class="minudiv">
+            <button>
+                <img style="height: 40px;" src="minuwhite.png" alt="">
+            </button>
+            <i>Sureeye</i>
+        </div>
+        <div class="searchbutton">
+            <button>
+            <img style="height: 30px;" src="search.jpg" alt="">
+            </button>
+        </div>
+        <div></div>
     </div>
-    <div id="mainContent" class="hidden">
+    <br>
+    <div class="box">
+        <a class="buttlinkpost" href="banee.html">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="https://sureeye7.blogspot.com/2023/11/sida-hackerka-looga-badbaadiyo-mobilka.html">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+        <a class="buttlinkpost" href="">
+            <img class="buttpost" src="hackerbloger.png" alt="">
+        </a>
+    </div>
+    <br>
+    <div class="downlink">
+        <ul class="linkdiv">
+            <a class="linkdown" href="">Nagu soo biir</a>
 
-        <div style="display: flex; justify-content: space-between;
-        background-image: url(Feuer.jpg); background-position: center;
-        position: fixed; width: 100%;">
-            <img style="height: 50px; border-radius: 20px;" src="minu.png.png" alt="">
-            <h1 style=" ">Willkommen</h1>
-            <label for=""></label>
-        </div>
-        <br>
-        <div class="coockiediv" id="cookieConsentBanner"
-        style="display: non; position: fixed; bottom: 0; width: 100%; background:
-         rgb(174, 99, 99); color: black; padding: 10px; text-align: center;">
-         Please accept our terms and conditions
-         This page is new but it is not using google search
-           <button class="onclick" onclick="acceptCookies()">zustimmen</button>
-           <button class="onclick" onclick="rejectCookies()">ablehnen</button>
-       </div>
-       <br>
-        <div style=" display: flex; margin-top: 11%; 
-        background-position: center; background-image: url(window.png);
-        height: 80vh;color: white;">
-            <div style="">
-                <h6 style="border: 1px solid black; box-shadow: 5px 5px 5px;
-                overflow: auto;
-                 ">
-                    In einem abgelegenen Dorf namens Grüntal lebte ein einsamer Schreiner namens Tobias. Tobias war bekannt für seine Kunstfertigkeit in der Herstellung von Holzspielzeugen. Jeden Tag verbrachte er Stunden damit, in seiner kleinen Werkstatt zu arbeiten, wobei das Klopfen seines Hobels und das Zischen seiner Säge die einzigen Geräusche waren, die sein bescheidenes Zuhause erfüllten.
+            <a class="linkdown" href="">guriga</a>
 
-Eines Tages, als der Frühling seine ersten zarten Knospen entfaltete, beschloss Tobias, etwas Besonderes zu tun. Er wollte ein Spielzeug erschaffen, das nicht nur Kinder, sondern auch Erwachsene begeistern würde. So begann er mit großer Hingabe an einem Holzdrachen zu arbeiten. Er schnitzte sorgfältig die Flügel, malte die Augen mit leuchtenden Farben und fügte kleine Details hinzu, die dem Drachen Leben einhauchten.
+            <a class="linkdown" href="">sida loo bixiyo</a>
+        </ul>
+        <ul class="linkdiv2">
+            <a class="linkdown" href="">wararka</a>
 
-Als der Drache fertig war, war Tobias selbst erstaunt über seine Arbeit. Er war so schön und majestätisch, dass Tobias das Gefühl hatte, er könnte jeden Moment zum Leben erwachen. Mit einem warmen Gefühl der Zufriedenheit legte er den Drachen in sein Schaufenster, in der Hoffnung, dass er jemandes Herz erobern würde.
+            <a class="linkdown" href="">xayaysiisyada</a>
 
-Und tatsächlich, am nächsten Tag strömten die Menschen aus dem Dorf herbei, um den wunderschönen Holzdrachen zu sehen. Kinder lachten vor Freude und Erwachsene bewunderten die Kunstfertigkeit des Schreiners. Aber was Tobias am meisten berührte, war das strahlende Lächeln eines kleinen Mädchens namens Lena. Sie war fasziniert von dem Drachen und konnte nicht aufhören, ihn anzustarren.
-
-Tobias spürte eine tiefe Zufriedenheit, als er Lena sah. Er wusste, dass er mit seinem Handwerk nicht nur Spielzeug schuf, sondern auch Freude und Glück in die Welt brachte. Von diesem Tag an war Tobias' Werkstatt nie wieder so still wie zuvor. Denn nun erfüllten das Lachen und die Freude der Menschen seine bescheidene Werkstatt mit Leben und Licht. Und Tobias wusste, dass er genau dort, zwischen Hobel und Säge, sein wahres Zuhause gefunden hatte.
-                </h6>
-            </div>
-            <div style="">
-                <h5 style=" overflow: auto;border: 1px solid black;
-                ">
-                    In den verzauberten Wäldern von Elveria lebte ein kleiner Kobold namens Finn. Finn war von Natur aus neugierig und abenteuerlustig. Jeden Tag streifte er durch den dichten Wald, erkundete verborgene Pfade und entdeckte geheime Verstecke.
-
-Eines Tages stieß Finn auf eine vergessene Höhle tief im Herzen des Waldes. Das Dunkel und die Stille, die darin herrschten, weckten seine Neugier. Mit einem zittrigen Herzen und einem mutigen Geist trat er in die Höhle ein.
-
-Was er dort fand, raubte ihm den Atem. Die Höhle war gefüllt mit leuchtenden Kristallen, die an den Wänden und an der Decke glitzerten wie die Sterne am nächtlichen Himmel. Finn war fasziniert von ihrer Schönheit und ihrem Glanz. Er streckte seine Hand aus, um einen der Kristalle zu berühren, und als er es tat, spürte er eine warme Energie, die durch seinen Körper strömte.
-
-In diesem Moment erkannte Finn, dass diese Kristalle etwas Besonderes waren. Sie besaßen magische Kräfte, die das Herz reinigten und den Geist erhellten. Mit einem Lächeln auf den Lippen und einem neuen Gefühl der Entschlossenheit kehrte Finn aus der Höhle zurück.
-
-Von diesem Tag an wurde Finn zu einem Hüter der Kristalle. Er beschloss, ihr Geheimnis zu bewahren und ihre Macht nur denen zu offenbaren, die sie mit einem reinen Herzen suchten. Die Menschen aus den umliegenden Dörfern hörten von Finns Entdeckung und kamen, um die magischen Kristalle zu sehen. Doch nur diejenigen, die wirklich dem Weg des Guten folgten, durften ihre heilende Berührung spüren.
-
-Und so wurde Finn nicht nur zum Helden von Elveria, sondern auch zu einem Symbol der Hoffnung und des Lichts. Denn in einer Welt, die von Dunkelheit bedroht war, leuchteten seine Kristalle wie Sterne in der Nacht und wiesen den Weg zur Wahrheit und zur Liebe.
-                </h5>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="indexnoein.html scr style="color: black; font-size: x-large;
-            left: 50%; background-color: blue;
-            color: white;">
-                weiter
-            </a>
-        </div>
-        <br>
-        <div class="arrow-container">
-            <div class="arrow"></div>
-          </div>
-          <br>
-        <div style="background-color: rgb(51, 48, 48);
-         display: flex; justify-content: space-between;">
-            <div onclick="amaan()">
-            <a href="">
-                <img style="height: 20px;" src="paypal.webp" alt="">
-            </a>
-            <a href="">
-                <img style="height: 20px;" src="postfinance.png" alt="">
-            </a>
-            </div>
-            <div>
-                <button>Hilfe</button>
-            </div>
-        </div>
-    </heider>
+            <a class="linkdown" href="">iibso</a>
+        </ul>
+    </div>
 </body>
 </html>
-<script>
-    function amaan() {
-        alert('jetzt ist nicht möglich')
-    }
-</script>
 <style>
-    .coockiesdiv{
-        position: fixed;
-        bottom: 25%;
-    }
 
-#splashScreen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    background-color: #3498db;
-    color: white;
-    font-size: 24px;
-    animation: fadeOut 3s forwards;
-    animation-delay: 2s;
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; visibility: hidden; }
-}
-
-.hidden {
-    display: none;
-}
-.arrow-container {
-  position: absolute;
-  width: 200px; /* Breite des Containers */
-  height: 200px; /* Höhe des Containers */
-  left: 15%;
-}
-
-.arrow {
-  position: absolute;
-  width: 10vh;
-  height: 10vh;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50vh;
-  background-image: url(animtion.jpg);
-  animation: arrowBounce 2s infinite; /* Verwende die CSS-Animation 'arrowBounce' */
-}
-
-@keyframes arrowBounce {
-  0%, 100% {
-    bottom: 0; /* Start- und Endposition des Pfeils */
-  }
-  50% {
-    bottom: 20px; /* Maximaler Abstand, den der Pfeil nach oben bewegt wird */
-  }
-}
 </style>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(function() {
-            document.getElementById('splashScreen').style.display = 'none';
-            document.getElementById('mainContent').classList.remove('hidden');
-        }, 5000); // Die Zeit sollte die Gesamtdauer der CSS-Animation widerspiegeln
-    });
-    </script>  
