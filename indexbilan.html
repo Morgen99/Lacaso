@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bilan audio</title>
+    <style>
+          *{
+            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+        .header{
+            margin: 0;
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            background-image: url(Feuer.jpg);
+            color: white;
+            background-position: center;
+            background-size: cover;
+        }
+        .searchbutton{
+            display: flex;
+            justify-content: end;
+            width: 88%;
+            position: absolute;
+            top: 5%;
+        }
+        .minudiv{
+            width: 50%;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+        }
+        .color{
+        position: absolute;
+        left: 50%;
+        top: 1%;
+        display: block;
+    }
+    #colorpicker{
+        background-color: blue;
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="minudiv">
+            <button>
+                <img style="height: 40px;" src="minuwhite.png" alt="">
+            </button>
+            <i>Sureeye</i>
+        </div>
+        <div class="color">
+            <h5 style="color: black;background-color: white;">iska badal colorka</h5>
+            <input type="color" id="colorPicker" name="colorPicker">
+        </div>
+        <div class="searchbutton">
+            <button>
+            <img style="height: 30px;" src="search.jpg" alt="">
+            </button>
+        </div>
+        <div></div>
+    </div>
+    <br>
+    <div style="text-align: center
+    ; display: block;" class="audio">
+        <video style="height: 250px;" controls src="bilan.mp4"></video>
+    </div>
+
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+const colorPicker = document.getElementById("colorPicker");
+
+colorPicker.addEventListener("input", function() {
+    document.body.style.backgroundColor = colorPicker.value;
+});
+});
+
+</script>
